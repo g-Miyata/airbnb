@@ -1,18 +1,21 @@
 import SearchBar from '@/widgets/SearchBar';
 import Header from '../widgets/Header';
+import HorizontalNavigation from '@/widgets/HorizontalNavigation';
 
 export default function Home() {
   return (
     <>
-      <div>
+      <header className="container mx-auto">
         <Header />
         <SearchBar />
-      </div>
+      </header>
 
-      <hr className="mt-5" />
+      <hr className="my-3" />
 
-      <div className="border-green-600 mt-10 border-2">Área conteúdos</div>
-      <div className="border-purple-600 border-2">Rodapé</div>
+      <main className="container mx-auto">
+        <HorizontalNavigation />
+      </main>
+      <footer className="container mx-auto">Rodapé</footer>
     </>
   );
 }
