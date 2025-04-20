@@ -5,7 +5,7 @@ import {IconUserCircle} from '@/assets/icons/icon'
 
 const Header = () => {
   return (
-    <div className="container py-6 mx-auto flex justify-between items-center">
+    <div className="py-6 flex justify-between items-center">
       <Logo />
 
       <div className="flex gap-6">
