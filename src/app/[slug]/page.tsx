@@ -1,3 +1,5 @@
+import AccommodationDetails from '@/widgets/AccommodationDetails';
+import AccommodationTestimonials from '@/widgets/AccommodationTestimonials';
 import Footer from '@/widgets/Footer';
 import Gallery from '@/widgets/Gallery';
 import Header from '@/widgets/Header';
@@ -204,8 +206,12 @@ export default async function AccommodationPage({ params }: { params: Promise<{ 
       </header>
 
       <main className="container mx-auto">
-        <h1 className="text-3xl font-semibold pt-6">{mockData.title}</h1>
+        <h1 className="text-3xl font-semibold pt-6 pb-2">{mockData.title}</h1>
         <Gallery photos={mockData.photos} />
+        <div className="flex flex-col md:flex-row">
+          <AccommodationDetails />
+          <AccommodationTestimonials />
+        </div>
       </main>
 
       <footer className="bg-gray-300">
