@@ -1,3 +1,4 @@
+import Accommodation from '@/components/Accommodation';
 import Image from 'next/image';
 
 const mockAccomodation = [
@@ -1937,16 +1938,18 @@ const mockAccomodation = [
     ],
   },
 ];
-const Accommodation = () => {
+const Accommodations = () => {
   return (
     <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 py-6 gap-4">
       {mockAccomodation.map((accommodation, index) => (
         <div key={index}>
-          <Image src={accommodation.photos[0].source} alt={accommodation.photos[0].description} width={300} height={300} className="w-full aspect-square object-cover rounded-xl" />
+          <Accommodation local={accommodation.location.description} host={accommodation.host} date={accommodation.date} price={accommodation.price} rating={accommodation.rating} favorite={accommodation.hasBadge}>
+            <Image src={accommodation.photos[0].source} alt={accommodation.photos[0].description} width={300} height={300} className="w-full aspect-square object-cover rounded-xl" />
+          </Accommodation>
         </div>
       ))}
     </section>
   );
 };
 
-export default Accommodation;
+export default Accommodations;
