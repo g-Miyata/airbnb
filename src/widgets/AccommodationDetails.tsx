@@ -1,9 +1,14 @@
 import { IconPhoto, IconToolsKitchen2, IconDesk, IconPool, IconBrandCarbon, IconSailboat, IconWifi, IconParking, IconAlarmSmoke, IconDog } from '@/assets/icons/icon';
+import { Accommodation } from '@/types/AirbnbData';
 
-const AccommodationDetails = () => {
+interface AccommodationDetailsProps {
+  accommodation: Accommodation;
+}
+
+const AccommodationDetails = ({ accommodation }: AccommodationDetailsProps) => {
   return (
     <div className="w-full pt-4">
-      <h2 className="text-xl font-semibold">oadmoamdoamo oajoajdoj aodjaojd oa ajdoaj</h2>
+      <h2 className="text-xl font-semibold">{accommodation.title}</h2>
       <ul className="flex gap-2">
         <li>10 hospedes</li>
         <li>&middot;</li>
