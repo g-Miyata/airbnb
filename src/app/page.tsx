@@ -1,6 +1,7 @@
 import SearchBar from '@/widgets/SearchBar';
 import Header from '../widgets/Header';
 import HorizontalNavigation from '@/widgets/HorizontalNavigation';
+import Accommodation from '@/widgets/Accommodation';
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
 
       <main className="container mx-auto">
         <HorizontalNavigation />
+        <Accommodation />
       </main>
       <footer className="container mx-auto">Rodapé</footer>
     </>
