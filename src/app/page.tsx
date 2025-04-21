@@ -2,6 +2,7 @@ import SearchBar from '@/widgets/SearchBar';
 import Header from '../widgets/Header';
 import HorizontalNavigation from '@/widgets/HorizontalNavigation';
 import Accommodations from '@/widgets/Accommodations';
+import Footer from '@/widgets/Footer';
 
 export default function Home() {
   return (
@@ -11,13 +12,15 @@ export default function Home() {
         <SearchBar />
       </header>
 
-      <hr className="my-3" />
+      <hr className="my-6  border-1 border-gray-200" />
 
       <main className="container mx-auto">
         <HorizontalNavigation />
         <Accommodations />
       </main>
-      <footer className="container mx-auto">Rodapé</footer>
+      <footer className="bg-gray-300">
+        <Footer />
+      </footer>
     </>
   );
 }
