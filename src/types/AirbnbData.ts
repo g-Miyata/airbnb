@@ -1,5 +1,5 @@
 export interface AirbnbAPI {
-  accommdation: Accommodation[];
+  accommodation: Accommodation[];
   icons: Photo[];
 }
 
