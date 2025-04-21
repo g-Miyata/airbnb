@@ -14,7 +14,7 @@ const Accommodation = ({ children, local, host, date, price, rating, favorite }:
   return (
     <figure className="relative">
       <div className="absolute w-full flex justify-between items-center p-2">
-        <span className="bg-white rounded-full px-4 py-1 font-semibold">Preferido dos hóspedes</span>
+        <div>{favorite && <span className="bg-white rounded-full px-4 py-1 font-semibold">Preferido dos hóspedes</span>}</div>
         <IconHeartFilled aria-label="Favorites Icon" size={30} className={`stroke-white opacity-80 ${favorite ? 'fill-red-500' : ''}`} />
       </div>
       {children}
@@ -26,7 +26,7 @@ const Accommodation = ({ children, local, host, date, price, rating, favorite }:
             <span className="font-semibold">{rating}</span>
           </div>
         </div>
-        <div>Anfitriao: {host}</div>
+        <div>Anfitrião: {host}</div>
         <div>{date}</div>
         <div className="font-semibold">R$ {price}</div>
       </figcaption>
