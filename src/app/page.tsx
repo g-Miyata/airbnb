@@ -3,8 +3,10 @@ import Header from '../widgets/Header';
 import HorizontalNavigation from '@/widgets/HorizontalNavigation';
 import Accommodations from '@/widgets/Accommodations';
 import Footer from '@/widgets/Footer';
+import { fetchData } from '@/utils/api';
 
-export default function Home() {
+export default async function Home() {
+  const data = await fetchData();
   return (
     <>
       <header className="container mx-auto">
@@ -15,8 +17,8 @@ export default function Home() {
       <hr className="my-6  border-1 border-gray-200" />
 
       <main className="container mx-auto">
-        <HorizontalNavigation />
-        <Accommodations />
+        <HorizontalNavigation icons={data.icons} />
+        <Accommodations accommodations={data.accommodation} />
       </main>
       <footer className="bg-gray-300">
         <Footer />
@@ -24,3 +26,4 @@ export default function Home() {
     </>
   );
 }
+
